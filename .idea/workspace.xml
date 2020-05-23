@@ -24,7 +24,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.Funkcja0">
+  <component name="RunManager" selected="Python.Neural">
     <configuration name="Funkcja0" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TkAnalizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -69,8 +69,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Funkcja0" />
         <item itemvalue="Python.Neural" />
+        <item itemvalue="Python.Funkcja0" />
       </list>
     </recent_temporary>
   </component>
@@ -81,29 +81,56 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1590273441591">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1590277436544">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590273441591" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1590273441591">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590277436544" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1590277436544">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590273441591" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1590273441591">
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590277436544" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1590277436544">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590273441591" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1590273441591">
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590277436544" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1590277436544">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590273441591" />
-    <state x="277" y="55" key="SettingsEditor" timestamp="1590273323419">
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590277436544" />
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1590277329215">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590273323419" />
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590277329215" />
+    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1590277329215">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590277329215" />
+    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1590277329215">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590277329215" />
+    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1590277329215">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590277329215" />
+    <state x="277" y="55" key="SettingsEditor" timestamp="1590273974254">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590273974254" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1590272588216">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1590272588216" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Neural.py</url>
+          <line>96</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
