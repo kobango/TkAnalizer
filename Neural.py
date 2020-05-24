@@ -9,7 +9,7 @@ import keras_segmentation
 import keras
 
 def NetworkGenerator(height,width):
-    img_input = keras.layers.Input(shape=(height, width,1))
+    img_input = keras.layers.Input(shape=(height, width,4))
 
     ## Enkoder
     conv1 = keras.layers.Conv2D(32, (3, 3), activation='relu', padding='same')(img_input)
@@ -75,27 +75,29 @@ def MasDataRead(path):
 
     Inputset = []
     Labelset = []
-    for a in range (1,100):
+    for a in range (1,3):
         ## Read Imput Data
         example_filename = os.path.join(data_path, path+str(a).zfill(3)+'.nii.gz')
         img = nib.load(example_filename)
         obraz = img.get_fdata()
-        first_vol = obraz[:, :, :, 0]
+        first_vol = obraz[:, :, :, :]
         test = first_vol[:, :, 70]
-        Inputset += [test]
+        Inputset.append(test)
 
         ## Read labels Data
-        example_filename = os.path.join(data_path, path+str(a).zfill(3)+'.nii.gz')
-        img = nib.load(example_filename)
-        obraz = img.get_fdata()
-        test = obraz[:, :, 70]
-        Labelset += [test]
+        example_filename2 = os.path.join(data_path, path+str(a).zfill(3)+'.nii.gz')
+        img2 = nib.load(example_filename2)
+        obraz2 = img2.get_fdata()
+        test2 = obraz2[:, :, 70]
+        Labelset.append(test2)
 
+    Inputset = np.array(Inputset)
+    Labelset = np.array(Labelset)
     return Inputset, Labelset
 
 def Training(model,Inputset,Labelset):
     model.compile(optimizer='sgd', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-
+    s = Inputset.shape
     model.fit(Inputset,Labelset,epochs=10)
     return model
 
