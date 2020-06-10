@@ -63,7 +63,7 @@ def main():
     example_filename = os.path.join(data_path, 'D:\\Task01_BrainTumour\\labelsTr\\BRATS_001.nii.gz')
     img = nib.load(example_filename)
     obraz = img.get_fdata()
-    test = obraz[:, :, 70]
+    test = obraz[:, :, 29]
 
     print(test)
     fig2 = plt.figure(2)
@@ -97,8 +97,17 @@ def MasDataRead(path):
 
 def Training(model,Inputset,Labelset):
     model.compile(optimizer='sgd', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+    l = Labelset.shape
+    print(l)
     s = Inputset.shape
-    model.fit(Inputset,Labelset,epochs=10)
+    print(s)
+    z =model.input.__len__
+    print(z)
+
+    ##model.fit(Inputset, Labelset, epochs=10)
+    for i in range(s[0]):
+        model.fit(Inputset,Labelset[i],epochs=10)
+        i
     return model
 
 def Generator():
@@ -108,7 +117,7 @@ def Generator():
 
 if __name__ == "__main__":
     # execute only if run as a script
-    ##main()
-    Generator()
+    main()
+    ##Generator()
 
 
