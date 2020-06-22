@@ -5,6 +5,17 @@ from keras.models import Sequential
 from keras.layers import Conv2D, MaxPool2D, Dropout, Flatten, Dense
 from keras import backend as K
 from keras.optimizers import SGD
+from keras.backend.tensorflow_backend import set_session
+
+import tensorflow as tf
+
+import pickle
+import os
+import keras
+import keras.backend.tensorflow_backend as ts
+
+import resetKeras
+
 import cv2
 
 from keras.utils.vis_utils import plot_model
@@ -18,8 +29,10 @@ import seaborn as sns
 
 import numpy as np
 
-def Create_network(a):
+def Create_network(a,name,epoki):
     # load mnist data
+
+
     Inputset = a[0]
     Labelset = a[1]
     print(Inputset.shape)
@@ -76,13 +89,13 @@ def Create_network(a):
     model.add(Dense(128, activation='relu'))
     model.add(Dropout(0.5))
     model.add(Dense(NUM_OF_CLASSES, activation='sigmoid'))
-
-    model.compile(loss='binary_crossentropy', optimizer=SGD(0.001), metrics=['accuracy'])
+    opt = keras.optimizers.SGD(learning_rate=0.0002)
+    model.compile(loss='binary_crossentropy', optimizer=opt, metrics=['accuracy'])
 
     print(model.summary())
 
     batch_size = 2
-    epochs = 10
+    epochs = epoki
 
     history = model.fit(x=I_train, y=L_train, epochs=epochs, batch_size=batch_size, verbose=1,
                         validation_data=(I_test, L_test))
@@ -92,54 +105,64 @@ def Create_network(a):
     print(f'Test loss: {score[0]}')
     print(f'Test accuracy: {score[1]}')
 
-    plot_model(model, show_shapes=True, show_layer_names=True)  # -> this will by default save image to png
+    #plot_model(model, show_shapes=True, show_layer_names=True)  # -> this will by default save image to png
 
-    img = cv2.imread('model.png', 1)
-    plt.figure(figsize=(30, 15))
-    plt.imshow(img)
+    #img = cv2.imread('model.png', 1)
+    #plt.figure(figsize=(30, 15))
+    #plt.imshow(img)
 
     history_dict = history.history
-    print(history_dict.keys())
+    os.makedirs(os.path.dirname('D:/Task01_BrainTumour/'+name+'/trainHistoryDict'), exist_ok=True)
+    os.makedirs(os.path.dirname('D:/Task01_BrainTumour/'+name+"/network"), exist_ok=True)
+    with open('D:/Task01_BrainTumour/'+name+'/trainHistoryDict', 'wb') as file_pi:
+        pickle.dump(history_dict, file_pi)
+    model.save('D:/Task01_BrainTumour/'+name+"/network")
 
-    loss_values = history_dict['loss']
-    val_loss_values = history_dict['val_loss']
-    epochs_as_list = range(1, len(loss_values) + 1)
+    print(os.path.dirname('/'+name))
+    resetKeras.reset_keras(model)
+    del history_dict
 
-    print(type(epochs_as_list))
+   # print(history_dict.keys())
 
-    plt.style.use('seaborn-darkgrid')
+    #loss_values = history_dict['loss']
+    #val_loss_values = history_dict['val_loss']
+    #epochs_as_list = range(1, len(loss_values) + 1)
 
-    train_loss_line = plt.plot(epochs_as_list, loss_values, label='Train loss')
-    test_loss_line = plt.plot(epochs_as_list, val_loss_values, label='Validation/Test loss')
+    #print(type(epochs_as_list))
 
-    plt.setp(train_loss_line, linewidth=2.0, marker='*', markersize=5.0)
-    plt.setp(test_loss_line, linewidth=2.0, marker='*', markersize=5.0)
+    #plt.style.use('seaborn-darkgrid')
 
-    plt.xlabel('Epochs')
-    plt.ylabel('Loss')
-    plt.grid(True)
-    plt.legend()
-    plt.show()
+    #train_loss_line = plt.plot(epochs_as_list, loss_values, label='Train loss')
+    #test_loss_line = plt.plot(epochs_as_list, val_loss_values, label='Validation/Test loss')
 
-    acc_values = history_dict['acc']
-    val_acc_values = history_dict['val_acc']
+    #plt.setp(train_loss_line, linewidth=2.0, marker='*', markersize=5.0)
+    #plt.setp(test_loss_line, linewidth=2.0, marker='*', markersize=5.0)
 
-    train_acc_line = plt.plot(epochs_as_list, acc_values, label='Train accuracy')
-    test_acc_line = plt.plot(epochs_as_list, val_acc_values, label='Test accuracy')
+    #plt.xlabel('Epochs')
+    #plt.ylabel('Loss')
+    #plt.grid(True)
+    #plt.legend()
+    #plt.show()
 
-    plt.setp(train_acc_line, linewidth=2.0, marker='*', markersize=5.0)
-    plt.setp(test_acc_line, linewidth=2.0, marker='*', markersize=5.0)
+    #acc_values = history_dict['acc']
+    #val_acc_values = history_dict['val_acc']
 
-    plt.xlabel('Epochs')
-    plt.ylabel('Accuracy')
-    plt.grid(True)
-    plt.legend()
-    plt.show()
+    #train_acc_line = plt.plot(epochs_as_list, acc_values, label='Train accuracy')
+    #test_acc_line = plt.plot(epochs_as_list, val_acc_values, label='Test accuracy')
 
-    y_pred = model.predict_classes(I_test)
+    #plt.setp(train_acc_line, linewidth=2.0, marker='*', markersize=5.0)
+    #plt.setp(test_acc_line, linewidth=2.0, marker='*', markersize=5.0)
 
-    print(classification_report(np.argmax(L_test, axis=1), y_pred))
+    #plt.xlabel('Epochs')
+    #plt.ylabel('Accuracy')
+    #plt.grid(True)
+    #plt.legend()
+    #plt.show()
 
-    cm = confusion_matrix(np.argmax(L_test, axis=1), y_pred)  # np.argmax because our labels were one hot encoded
-    plt.figure(figsize=(20, 10))
-    sns.heatmap(cm, annot=True)
+    #y_pred = model.predict_classes(I_test)
+
+    #print(classification_report(np.argmax(L_test, axis=1), y_pred))
+
+    #cm = confusion_matrix(np.argmax(L_test, axis=1), y_pred)  # np.argmax because our labels were one hot encoded
+    #plt.figure(figsize=(20, 10))
+    #sns.heatmap(cm, annot=True)

@@ -5,11 +5,11 @@ import nibabel as nib
 from matplotlib import pyplot as plt
 
 
-def MasDataRead(path):
+def MasDataRead(path,number):
 
     Inputset = []
     Labelset = []
-    for a in range (1,20):
+    for a in range (1,number):
         ## Read Imput Data
         example_filename = os.path.join(data_path, path+str(a).zfill(3)+'.nii.gz')
         img = nib.load(example_filename)
