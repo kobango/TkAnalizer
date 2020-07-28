@@ -5,7 +5,7 @@ import nibabel as nib
 from matplotlib import pyplot as plt
 
 
-def MasDataRead(path,number):
+def MasDataRead(path,number,slice):
 
     Inputset = []
     Labelset = []
@@ -14,14 +14,14 @@ def MasDataRead(path,number):
         example_filename = os.path.join(data_path, path+str(a).zfill(3)+'.nii.gz')
         img = nib.load(example_filename)
         obraz = img.get_fdata()
-        first_vol = obraz[:, :, :, :]
+        first_vol = obraz[:, :, :, slice]
         print(first_vol.shape)
         slice_number = first_vol.shape[2]
 
         for oneslice in range(0,slice_number):
             test = first_vol[:, :, oneslice]
             Inputset.append(test)
-        #Inputset.append(first_vol[:,:,3])
+        #Inputset.append(first_vol[:,:,slice])
 
 
         ## Read labels Data

@@ -9,8 +9,7 @@ from datetime import time, timedelta
 import pickle
 import os
 import keras
-
-import resetKeras
+from keras.utils import normalize
 
 
 
@@ -24,7 +23,7 @@ def Create_network(a, name, epoki):
     Labelset = a[1]
     print(Inputset.shape)
     print(Labelset.shape)
-    NUM_OF_SAMPLES, IMG_WIDTH, IMG_HEIGHT, DEM = Inputset.shape
+    NUM_OF_SAMPLES, IMG_WIDTH, IMG_HEIGHT = Inputset.shape
     NUM_OF_TEST_SAMPLES = 100
     NUM_OF_TRAIN_SAMPLES = NUM_OF_SAMPLES - NUM_OF_TEST_SAMPLES
     I_train = Inputset[0:NUM_OF_TRAIN_SAMPLES]
@@ -32,10 +31,10 @@ def Create_network(a, name, epoki):
     I_test = Inputset[NUM_OF_TRAIN_SAMPLES:NUM_OF_SAMPLES]
     L_test = Labelset[NUM_OF_TRAIN_SAMPLES:NUM_OF_SAMPLES]
 
-    I_train = I_train.reshape((NUM_OF_TRAIN_SAMPLES, IMG_WIDTH, IMG_HEIGHT, 4))
+    I_train = I_train.reshape((NUM_OF_TRAIN_SAMPLES, IMG_WIDTH, IMG_HEIGHT,1))
     L_train = L_train.reshape((NUM_OF_TRAIN_SAMPLES, 1))
 
-    I_test = I_test.reshape((NUM_OF_TEST_SAMPLES, IMG_WIDTH, IMG_HEIGHT, 4))
+    I_test = I_test.reshape((NUM_OF_TEST_SAMPLES, IMG_WIDTH, IMG_HEIGHT,1))
     L_test = L_test.reshape((NUM_OF_TEST_SAMPLES, 1))
 
     print(f'Shape of our training data: {I_train.shape}')
@@ -44,13 +43,15 @@ def Create_network(a, name, epoki):
     print(f'Shape of our test data: {I_test.shape}')
     print(f'Shape of our test labels: {L_test.shape}')
 
-    I_train = I_train.astype('float32')
-    I_test = I_test.astype('float32')
 
 
     # now normalize
-    I_train /= 255.0
-    I_test /= 255.0
+    I_train = normalize(I_train,axis=1)
+    I_test = normalize(I_test, axis=1)
+
+
+    I_train = I_train.astype('float32')
+    I_test = I_test.astype('float32')
 
 
 
@@ -60,25 +61,47 @@ def Create_network(a, name, epoki):
     NUM_OF_CLASSES = L_test.shape[1]
     print(f'Number of classes/ Number of columns : {NUM_OF_CLASSES}')
 
-    input_shape = (IMG_WIDTH, IMG_HEIGHT, 4)
+    input_shape = (IMG_WIDTH, IMG_HEIGHT,1)
 
     # create model
 
     model = Sequential()
 
-    model.add(Conv2D(filters=32, kernel_size=(3, 3), activation='relu', input_shape=input_shape))
-    model.add(Conv2D(filters=64, kernel_size=(3, 3), activation='relu'))
-
-    model.add(MaxPool2D(pool_size=(2, 2)))
-    model.add(Dropout(0.25))
-    model.add(Conv2D(filters=32, kernel_size=(3, 3), activation='relu'))
-    model.add(Flatten())
+    #model.add(Conv2D(filters=128, kernel_size=(9, 9), activation='relu', input_shape=input_shape))
+    model.add(Conv2D(filters=32, kernel_size=(9, 9), activation='relu', input_shape=input_shape))
     model.add(
         BatchNormalization())
+    model.add(MaxPool2D(pool_size=(3, 3)))
+    model.add(Dropout(0.2))
+
+    model.add(Conv2D(filters=64, kernel_size=(7, 7), activation='relu'))
+    model.add(
+        BatchNormalization())
+    model.add(MaxPool2D(pool_size=(3, 3)))
+    model.add(Dropout(0.2))
+
+    model.add(Conv2D(filters=64, kernel_size=(5, 5), activation='relu'))
+    model.add(
+        BatchNormalization())
+    model.add(MaxPool2D(pool_size=(3, 3)))
+    model.add(Dropout(0.2))
+
+    model.add(Conv2D(filters=32, kernel_size=(3, 3), activation='relu'))
+    model.add(
+        BatchNormalization())
+    model.add(MaxPool2D(pool_size=(3, 3)))
+    model.add(Flatten())
+
+
+
     model.add(Dense(128, activation='relu'))
     model.add(Dropout(0.5))
     model.add(Dense(256, activation='relu'))
     model.add(Dropout(0.5))
+    #model.add(Dense(512, activation='relu'))
+    #model.add(Dropout(0.5))
+    #model.add(Dense(256, activation='relu'))
+    #model.add(Dropout(0.5))
     model.add(Dense(128, activation='relu'))
     model.add(Dropout(0.5))
     model.add(Dense(NUM_OF_CLASSES, activation='sigmoid'))

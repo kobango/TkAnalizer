@@ -40,7 +40,7 @@ def ModelVall(path,number):
 
 
 def main():
-    ModelVall('D:/Task01_BrainTumour/Prometeusz1/network',20)
+    ModelVall('D:/Task01_BrainTumour/Test_21_20/network',20)
 
 if __name__ == "__main__":
     # execute only if run as a script

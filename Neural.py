@@ -60,13 +60,40 @@ def main():
     max = np.max(test)
     plt.imshow(test, interpolation='nearest', cmap='gray', vmin=min, vmax=max)
 
+    first_vol = obraz[:, :, :, 1]
+    test = first_vol[:, :, 70]
+
+    print(test)
+    fig = plt.figure(2)
+    min = np.min(test)
+    max = np.max(test)
+    plt.imshow(test, interpolation='nearest', cmap='gray', vmin=min, vmax=max)
+
+    first_vol = obraz[:, :, :, 2]
+    test = first_vol[:, :, 70]
+
+    print(test)
+    fig = plt.figure(3)
+    min = np.min(test)
+    max = np.max(test)
+    plt.imshow(test, interpolation='nearest', cmap='gray', vmin=min, vmax=max)
+
+    first_vol = obraz[:, :, :, 3]
+    test = first_vol[:, :, 70]
+
+    print(test)
+    fig = plt.figure(4)
+    min = np.min(test)
+    max = np.max(test)
+    plt.imshow(test, interpolation='nearest', cmap='gray', vmin=min, vmax=max)
+
     example_filename = os.path.join(data_path, 'D:\\Task01_BrainTumour\\labelsTr\\BRATS_001.nii.gz')
     img = nib.load(example_filename)
     obraz = img.get_fdata()
-    test = obraz[:, :, 29]
+    test = obraz[:, :, 70]
 
     print(test)
-    fig2 = plt.figure(2)
+    fig2 = plt.figure(5)
     plt.imshow(test)
     plt.show()
 

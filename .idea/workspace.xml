@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04c527fd-929f-4ecc-af6c-16e47ac66dbe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/MonoNetworkGen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mono_DataGen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocReader.py" beforeDir="false" afterPath="$PROJECT_DIR$/DocReader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelClassVal.py" beforeDir="false" afterPath="$PROJECT_DIR$/ModelClassVal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetworkGen.py" beforeDir="false" afterPath="$PROJECT_DIR$/NetworkGen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Neural.py" beforeDir="false" afterPath="$PROJECT_DIR$/Neural.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrainDataGen.py" beforeDir="false" afterPath="$PROJECT_DIR$/TrainDataGen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,10 +37,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
-  <component name="RunManager" selected="Python.ModelClassVal">
-    <configuration name="DocReader" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.DocReader">
+    <configuration name="DocReader" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="TkAnalizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -116,6 +124,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Neural" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TkAnalizer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Neural.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="lab" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TkAnalizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -139,9 +168,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ModelClassVal" />
-        <item itemvalue="Python.DocReader" />
         <item itemvalue="Python.Main" />
+        <item itemvalue="Python.ModelClassVal" />
+        <item itemvalue="Python.Neural" />
         <item itemvalue="Python.lab" />
         <item itemvalue="Python.MSiPB" />
       </list>
@@ -190,26 +219,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="424" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592864890934" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1592593125108">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1593189070485">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1592593125108" />
-    <state width="1515" height="246" key="GridCell.Tab.0.bottom" timestamp="1592864191078">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1593189070485" />
+    <state width="1515" height="246" key="GridCell.Tab.0.bottom" timestamp="1595930127837">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="246" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592864191078" />
-    <state width="1515" height="246" key="GridCell.Tab.0.center" timestamp="1592864191078">
+    <state width="1515" height="246" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595930127837" />
+    <state width="1515" height="246" key="GridCell.Tab.0.center" timestamp="1595930127837">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="246" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592864191078" />
-    <state width="1515" height="246" key="GridCell.Tab.0.left" timestamp="1592864191078">
+    <state width="1515" height="246" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595930127837" />
+    <state width="1515" height="246" key="GridCell.Tab.0.left" timestamp="1595930127837">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="246" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592864191078" />
-    <state width="1515" height="246" key="GridCell.Tab.0.right" timestamp="1592864191078">
+    <state width="1515" height="246" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595930127837" />
+    <state width="1515" height="246" key="GridCell.Tab.0.right" timestamp="1595930127837">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="246" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592864191078" />
+    <state width="1515" height="246" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595930127837" />
     <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1592863545860">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -226,14 +255,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1592863545859" />
-    <state x="277" y="55" key="SettingsEditor" timestamp="1592745406677">
+    <state x="277" y="55" key="SettingsEditor" timestamp="1595259508530">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1592745406677" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1592775404557">
+    <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595259508530" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1595801463612">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1592775404557" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1595801463612" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1590272588216">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
