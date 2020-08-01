@@ -49,7 +49,7 @@ def MasDataRead(path,number):
 
 def main():
     print("Main function of the module")
-    Inputset, Labelset = MasDataRead('D:\\Task01_BrainTumour\\imagesTr\\BRATS_')
+    Inputset, Labelset = MasDataRead('D:\\Task01_BrainTumour\\imagesTr\\BRATS_',20)
 
 
 if __name__ == "__main__":
