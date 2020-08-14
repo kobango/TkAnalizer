@@ -56,7 +56,7 @@ def DocReader(path):
     #sns.heatmap(cm, annot=True)
 
 def main():
-    DocReader('D:/Task01_BrainTumour/Mono_25_basic_Ephos30_Slice2/trainHistoryDict')
+    DocReader('D:/Task01_BrainTumour/Mono_27_basic_Ephos50_Slice2_extended/trainHistoryDict')
 
 if __name__ == "__main__":
     # execute only if run as a script

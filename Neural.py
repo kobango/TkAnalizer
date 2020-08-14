@@ -49,9 +49,10 @@ def main():
     example_filename = os.path.join(data_path, 'D:\\Task01_BrainTumour\\imagesTr\\BRATS_001.nii.gz')
     img = nib.load(example_filename)
     print(img.shape)
+    slicenumber =13
     obraz = img.get_fdata()
     first_vol = obraz[:, :, :, 0]
-    test = first_vol[:, :, 70]
+    test = first_vol[:, :, slicenumber]
 
 
     print(test)
@@ -61,7 +62,7 @@ def main():
     plt.imshow(test, interpolation='nearest', cmap='gray', vmin=min, vmax=max)
 
     first_vol = obraz[:, :, :, 1]
-    test = first_vol[:, :, 70]
+    test = first_vol[:, :, slicenumber]
 
     print(test)
     fig = plt.figure(2)
@@ -70,7 +71,7 @@ def main():
     plt.imshow(test, interpolation='nearest', cmap='gray', vmin=min, vmax=max)
 
     first_vol = obraz[:, :, :, 2]
-    test = first_vol[:, :, 70]
+    test = first_vol[:, :, slicenumber]
 
     print(test)
     fig = plt.figure(3)
@@ -79,7 +80,7 @@ def main():
     plt.imshow(test, interpolation='nearest', cmap='gray', vmin=min, vmax=max)
 
     first_vol = obraz[:, :, :, 3]
-    test = first_vol[:, :, 70]
+    test = first_vol[:, :, slicenumber]
 
     print(test)
     fig = plt.figure(4)
@@ -90,8 +91,8 @@ def main():
     example_filename = os.path.join(data_path, 'D:\\Task01_BrainTumour\\labelsTr\\BRATS_001.nii.gz')
     img = nib.load(example_filename)
     obraz = img.get_fdata()
-    test = obraz[:, :, 70]
-
+    test = obraz[:, :, slicenumber]
+    print(sum(sum(test)))
     print(test)
     fig2 = plt.figure(5)
     plt.imshow(test)

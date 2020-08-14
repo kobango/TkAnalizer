@@ -7,6 +7,8 @@ import seaborn as sns
 import TrainDataGen
 from keras.models import load_model
 from keras.utils import np_utils
+from keras.utils import normalize
+
 
 def ModelVall(path,number):
     model = load_model(path)
@@ -23,8 +25,11 @@ def ModelVall(path,number):
     I_test = Inputset[NUM_OF_TRAIN_SAMPLES:NUM_OF_SAMPLES]
     L_test = Labelset[NUM_OF_TRAIN_SAMPLES:NUM_OF_SAMPLES]
 
+
+    I_test = normalize(I_test, axis=1)
+
+
     I_test = I_test.astype('float32')
-    I_test /= 255.0
 
     L_test = np_utils.to_categorical(L_test)
 

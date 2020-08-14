@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04c527fd-929f-4ecc-af6c-16e47ac66dbe" name="Default Changelist" comment="" />
+    <list default="true" id="04c527fd-929f-4ecc-af6c-16e47ac66dbe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/MonoImgCreator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PageBackNeural.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testNumpy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocReader.py" beforeDir="false" afterPath="$PROJECT_DIR$/DocReader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelClassVal.py" beforeDir="false" afterPath="$PROJECT_DIR$/ModelClassVal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoNetworkGen.py" beforeDir="false" afterPath="$PROJECT_DIR$/MonoNetworkGen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mono_DataGen.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mono_DataGen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Neural.py" beforeDir="false" afterPath="$PROJECT_DIR$/Neural.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +40,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
-  <component name="RunManager" selected="Python.DocReader">
+  <component name="RunManager" selected="Python.PageBackNeural">
     <configuration name="DocReader" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="TkAnalizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -43,27 +54,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DocReader.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="MSiPB" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="TkAnalizer" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/PycharmProjects/lab3" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/PycharmProjects/lab3/MSiPB.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -93,7 +83,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ModelClassVal" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="MonoImgCreator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TkAnalizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -105,7 +95,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ModelClassVal.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MonoImgCreator.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -135,7 +125,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lab" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="PageBackNeural" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TkAnalizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -143,11 +133,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/PycharmProjects/IRR" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/PycharmProjects/IRR/lab.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PageBackNeural.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="testNumpy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TkAnalizer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testNumpy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -158,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.PageBackNeural" />
         <item itemvalue="Python.Main" />
-        <item itemvalue="Python.ModelClassVal" />
+        <item itemvalue="Python.MonoImgCreator" />
+        <item itemvalue="Python.testNumpy" />
         <item itemvalue="Python.Neural" />
-        <item itemvalue="Python.lab" />
-        <item itemvalue="Python.MSiPB" />
       </list>
     </recent_temporary>
   </component>
@@ -216,50 +227,50 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="424" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1595933269941" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1596273265826">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1596831443795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596273265826" />
-    <state width="1515" height="246" key="GridCell.Tab.0.bottom" timestamp="1595933303714">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596831443795" />
+    <state width="1515" height="246" key="GridCell.Tab.0.bottom" timestamp="1597402648272">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="246" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595933303714" />
-    <state width="1515" height="246" key="GridCell.Tab.0.center" timestamp="1595933303714">
+    <state width="1515" height="246" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597402648272" />
+    <state width="1515" height="246" key="GridCell.Tab.0.center" timestamp="1597402648272">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="246" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595933303714" />
-    <state width="1515" height="246" key="GridCell.Tab.0.left" timestamp="1595933303714">
+    <state width="1515" height="246" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597402648272" />
+    <state width="1515" height="246" key="GridCell.Tab.0.left" timestamp="1597402648272">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="246" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595933303714" />
-    <state width="1515" height="246" key="GridCell.Tab.0.right" timestamp="1595933303714">
+    <state width="1515" height="246" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597402648272" />
+    <state width="1515" height="246" key="GridCell.Tab.0.right" timestamp="1597402648272">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="246" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595933303714" />
-    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1592863545860">
+    <state width="1515" height="246" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597402648272" />
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1597402560503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592863545860" />
-    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1592863545858">
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597402560503" />
+    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1597402560503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1592863545858" />
-    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1592863545858">
+    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1597402560503" />
+    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1597402560503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1592863545858" />
-    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1592863545859">
+    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1597402560503" />
+    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1597402560503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1592863545859" />
+    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1597402560503" />
     <state x="277" y="55" key="SettingsEditor" timestamp="1595259508530">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595259508530" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1596272627593">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1596831417684">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1596272627593" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1596831417684" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1590272588216">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
