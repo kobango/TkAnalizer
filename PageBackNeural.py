@@ -18,6 +18,7 @@ def Loaddata(pathToImg):
     oneImg = Image.open(pathToImg)
     oneImg = oneImg.resize((imageWith, imageHeight), typeOfImageResizeAproxymation)
     tablizedImage = np.array(oneImg.getdata()).reshape(1,imageWith, imageHeight, numberOfCanal)
+    tablizedImage = tablizedImage/255
     return tablizedImage
 
 def Predict(network,PATH_TO_IMG):
