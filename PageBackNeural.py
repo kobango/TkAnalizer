@@ -37,10 +37,8 @@ def main():
     network = LoadModel(path_to_network) #To powinno byc na poczatku pracy serwera
     #
 
-    dataset = Loaddata(PATH_TO_IMG)
-    print(dataset)
 
-    result = network.predict_classes(dataset)
+    result =  Predict(network,PATH_TO_IMG)
     print(result)
 
 
